@@ -26,39 +26,39 @@
 </template>
 <script>
 export default {
-  name: 'app',
-  data () {
+  name: "app",
+  data() {
     return {
       list: [
         {
           id: 0,
-          info: 'Racing car sprays burning fuel into crowd.',
-          done: false
+          info: "Racing car sprays burning fuel into crowd.",
+          done: false,
         },
         {
           id: 1,
-          info: ' Japanese princess to wed commoner.',
-          done: false
+          info: " Japanese princess to wed commoner.",
+          done: false,
         },
         {
           id: 2,
-          info: 'Australian walks 100km after outback crash.',
-          done: false
+          info: "Australian walks 100km after outback crash.",
+          done: false,
         },
         {
           id: 3,
-          info: 'Man charged over missing wedding girl.',
-          done: false
+          info: "Man charged over missing wedding girl.",
+          done: false,
         },
         {
           id: 4,
-          info: 'Los Angeles battles huge wildfires.',
-          done: false
-        }
-      ]
-    }
-  }
-}
+          info: "Los Angeles battles huge wildfires.",
+          done: false,
+        },
+      ],
+    };
+  },
+};
 </script>
 <style scoped>
 #app {
