@@ -69,12 +69,12 @@ export default new Vuex.Store({
 
   },
   actions: {
-    getList (context) {
-      axios.get('/list.json').then(({ data }) => {
-        console.log(data)
-        context.commit('initList', data)
-      })
-    }
+    // getList (context) {
+    //   axios.get('/list.json').then(({ data }) => {
+    //     console.log(data)
+    //     context.commit('initList', data)
+    //   })
+    // }
   },
   modules: {
   },

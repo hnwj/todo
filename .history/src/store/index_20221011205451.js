@@ -88,7 +88,7 @@ export default new Vuex.Store({
         return state.list
       }
       if (state.viewKey === 'undone') {
-        return state.list.filter(x => !x.done)
+        return state.list.filter((x) => !x.done)
       }
       if (state.viewKey === 'done') {
         return state.list.filter(x => x.done)

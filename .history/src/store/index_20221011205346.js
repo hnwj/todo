@@ -37,7 +37,7 @@ export default new Vuex.Store({
       state.inputValue = ''
       this.commit('saveStateData')
     },
-    // 根据id，删除事项
+    // id，删除事项
     removeItem (state, id) {
       // 查id
       const i = state.list.findIndex(x => x.id === id)
@@ -52,7 +52,6 @@ export default new Vuex.Store({
       if (i !== -1) {
         state.list[i].done = params.status
       }
-      this.commit('saveStateData')
     },
     // 清除所有完成的事项
     clearDone (state) {
@@ -88,7 +87,7 @@ export default new Vuex.Store({
         return state.list
       }
       if (state.viewKey === 'undone') {
-        return state.list.filter(x => !x.done)
+        return state.list.filter((x) => !x.done)
       }
       if (state.viewKey === 'done') {
         return state.list.filter(x => x.done)

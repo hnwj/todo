@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     // 所有的任务列表
-    list: localStorage.getItem('todolist' || '[]'),
+    list: localStorage.getItem('todolist'),
     // 文本框的内容
     inputValue: 'aa',
     // 下一个事项id
@@ -35,9 +35,8 @@ export default new Vuex.Store({
       state.list.push(obj)
       state.nextId++
       state.inputValue = ''
-      this.commit('saveStateData')
     },
-    // 根据id，删除事项
+    // 更具id，删除事项
     removeItem (state, id) {
       // 查id
       const i = state.list.findIndex(x => x.id === id)
@@ -52,7 +51,6 @@ export default new Vuex.Store({
       if (i !== -1) {
         state.list[i].done = params.status
       }
-      this.commit('saveStateData')
     },
     // 清除所有完成的事项
     clearDone (state) {
@@ -88,7 +86,7 @@ export default new Vuex.Store({
         return state.list
       }
       if (state.viewKey === 'undone') {
-        return state.list.filter(x => !x.done)
+        return state.list.filter((x) => !x.done)
       }
       if (state.viewKey === 'done') {
         return state.list.filter(x => x.done)

@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     // 所有的任务列表
-    list: localStorage.getItem('todolist' || '[]'),
+    list: localStorage.getItem('todolist' || "[]"),
     // 文本框的内容
     inputValue: 'aa',
     // 下一个事项id
@@ -16,11 +16,11 @@ export default new Vuex.Store({
     viewKey: 'all'
   },
   mutations: {
-    initList (state, list) {
-      state.list = list
-      // 将todolist本地持久化存储
-      this.commit('saveStateData')
-    },
+    // initList (state, list) {
+    //   state.list = list
+    //   // 将todolist本地持久化存储
+    //   this.commit('saveStateData')
+    // },
     // 为store中的inputValue赋值
     setInputValue (state, val) {
       state.inputValue = val
@@ -69,12 +69,12 @@ export default new Vuex.Store({
 
   },
   actions: {
-    getList (context) {
-      axios.get('/list.json').then(({ data }) => {
-        console.log(data)
-        context.commit('initList', data)
-      })
-    }
+    // getList (context) {
+    //   axios.get('/list.json').then(({ data }) => {
+    //     console.log(data)
+    //     context.commit('initList', data)
+    //   })
+    // }
   },
   modules: {
   },

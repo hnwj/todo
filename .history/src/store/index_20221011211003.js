@@ -16,11 +16,11 @@ export default new Vuex.Store({
     viewKey: 'all'
   },
   mutations: {
-    initList (state, list) {
-      state.list = list
-      // 将todolist本地持久化存储
-      this.commit('saveStateData')
-    },
+    // initList (state, list) {
+    //   state.list = list
+    //   // 将todolist本地持久化存储
+    //   this.commit('saveStateData')
+    // },
     // 为store中的inputValue赋值
     setInputValue (state, val) {
       state.inputValue = val
